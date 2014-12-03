@@ -19,6 +19,7 @@ $client = new Client('<your-tinypng-api-key>');
 
 try {
     $client->compress('/path/to/original.png');
+    $client->compress('<image data>', true); // Compress raw image data
     $client->storeFile('/path/to/compressed.png'); // Write the returned image
     $client->getCompressedFileSize(); // Int size of compressed image, e.g: 104050
     $client->getCompressedFileSize(true); // Human-readable, e.g: '101.61 KB'

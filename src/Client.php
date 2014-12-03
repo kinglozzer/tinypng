@@ -88,10 +88,12 @@ class Client
 
     /**
      * @param string $file Path to the file or raw file data
+     * @param boolean $isRawData Set true if passing raw file data as first parameter
+     * @return self
      */
-    public function compress($file)
+    public function compress($file, $isRawData = false)
     {
-        $contents = is_file($file) ? file_get_contents($file) : $file;
+        $contents = $isRawData ? $file : file_get_contents($file);
         $this->request->authenticate($this->key);
         $this->response = $this->request->send($contents);
 
@@ -104,6 +106,8 @@ class Client
 
             $this->handleError($error, $message);
         }
+
+        return $this;
     }
 
     /**

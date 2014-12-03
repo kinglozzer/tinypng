@@ -87,7 +87,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
         $client = new Client('test-authenticate-key');
         $client->setRequest($mockRequest);
-        $client->compress('rawfiledata');
+        $client->compress('rawfiledata', true);
     }
 
     /**
@@ -103,7 +103,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
         $client = new Client('test-authenticate-key');
         $client->setRequest($mockRequest);
-        $client->compress('rawfiledata');
+        $client->compress('rawfiledata', true);
     }
 
     /**
@@ -139,7 +139,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
             ->with('TestError', 'Oh no!');
 
         $mockClient->setRequest($mockRequest);
-        $mockClient->compress('something');
+        $mockClient->compress('something', true);
     }
 
     /**
