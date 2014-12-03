@@ -1,4 +1,5 @@
 # TinyPNG PHP API
+[![Build Status](https://travis-ci.org/kinglozzer/tinypng.png?branch=master)](https://travis-ci.org/kinglozzer/tinypng)
 
 Provides an easy-to-use API for interacting with TinyPNG's developer API.
 
