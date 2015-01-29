@@ -23,7 +23,6 @@ class Request
             $this->curl,
             array(
                 CURLOPT_RETURNTRANSFER => 1,
-                CURLOPT_USERAGENT => 'kinglozzer/tinypng PHP API',
                 CURLOPT_BINARYTRANSFER => 1
             )
         );
