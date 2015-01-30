@@ -62,7 +62,7 @@ class Request
 
     /**
      * @param string|null $fileData The raw file data to post
-     * @return Kinglozzer\TinyPng\Http\Response
+     * @return \Kinglozzer\TinyPng\Http\Response
      */
     public function send($fileData = null)
     {
